@@ -1,0 +1,38 @@
+======================================================
+			-- Inicializando Ambiente --
+======================================================
+
+1 -- Node instalado 
+
+2 -- Criando arquivo package.json
+
+	-- Dentro do Terminal --
+
+		|npm i -y|
+
+3 -- instalando o express na versão 4.16.2 , salvando as dependências.
+
+	-- Dentro do Terminal
+
+		|npm i --save express@4.16.2 -E|
+
+			--save => salvar dependências.
+			-E => versão exata.
+
+		|npm i --save-dev nodemon|
+
+	-- Essa dependência, fará um parse do body da requisição retornando um objeto, utilizado do lado do Servidor.
+
+		|npm i --save body-parse@1.18.2 -E|
+
+4 -- Configurando package.json
+
+	-- Dentro de |script| criar o atributo |"start": "nodemon"|
+
+
+
+
+
+
+
+
