@@ -1,0 +1,10 @@
+O que é ?
+	R: É um cliente HTTP
+Onde funciona ?
+	R: Funciona no brower tanto no node.js
+O axios é básicamente ?
+	R: É basicamente uma API que sabe interagir tanto com XMLHttpRequest quanto com a interface http do node.
+
+ObS: Isso significa que o mesmo código utilizado para fazer requisições ajax no browser também funciona no servidor.
+
+XMLHttpRequest: é um objeto que fornece funcionalidade ao cliente para transferir dados entre um cliente e um servidor.

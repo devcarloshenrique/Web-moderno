@@ -1,0 +1,12 @@
+const fs = require('fs') // Requirindo modulo do node
+
+const produto = {
+	
+	nome: 'Celular',
+	preco: 1249.99 
+ }
+
+
+fs.writeFile(__dirname + 'ArquivoGerado.json', JSON.stringify(produto), err =>{
+	console.log(err || 'ArquivoGerado.json foi gerado com Sucesso')
+})

@@ -1,0 +1,22 @@
+	-- For --
+
+1° Faça um Array de 1 a 10, fazendo o loop com (for in) e (for of)
+2° Faça um Array de 1 a 10, utilizando for e Array.length
+3° Faça um objeto que tem como atributo nome , sobreNome e dataNasc,
+imprima os dados utilizando (for in).
+
+	-- Break e Continue --
+
+1° Faça um Array de 1 a 10, faça dois loops, um deles na chave[5] você utiliza break e no outro loop na chave[5] você utiliza continue.
+
+	-- While e Do/While --
+
+1° Faça uma função que retorna um valor aleatorio entre dois parametros (min = 0 , max = 10). Faça dois loops utilizando While e Do/While, os loops vão continuar em quanto uma variavel limitador for != 5
+
+	-- ifElseIf --
+
+1° Faça uma função utilizando Number.prototype que tem como parametro (inicio , fim) e deve retornar 'true' casa receba um valor entre (inicio e fim). Utilizando ifElseIf faça um sistema de notas.
+
+	-- Switch / Case --
+
+1° Faça uma função utilizando Switch Case, em que dependendo da nota apareça uma mensagem diferente

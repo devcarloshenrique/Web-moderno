@@ -1,0 +1,15 @@
+1 -- 
+	this === Global => false
+	this === module => false
+	this === module.exports => true
+	this === exports => true
+
+Function ThisLog(){
+	this === Global => true
+	this === module => false
+	this === module.exports => false
+	this === exports => false
+}
+
+
+	

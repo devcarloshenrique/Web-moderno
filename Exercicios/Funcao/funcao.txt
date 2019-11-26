@@ -1,0 +1,79 @@
+	-- Formas de definir uma função --
+
+1° Criar uma função de forma literal que retorna a soma de a + b
+2° Criar uma função dentro de uma variavel que retorna a soma de a + b
+3° Armazene uma função dentro de uma Array, essa função deve retorna 
+a soma de a + b
+4° Crie uma função e armazene uma função dentro de um atributo, essa função deve retornar a soma de a + b
+5° Crie uma função que recebe como parametro outra função, essa função deve retorna a soma de a + b
+6° Crie uma função que recebe como parametro (a , b), essa função deve retorna uma função que imprime a soma de (a + b + c)
+
+	-- forInArguments -- 
+
+1° Faça uma função sem parametros, porêm todo numero passado como parametro , resultará no retorno de uma soma. Utilize forInArguments
+
+	-- Parametros Padrão --
+
+1° Crie uma função que tem como parametro a , b , c , d = 0 para definir os padrõs utilize || , undefined , in arguments , isNaN() essa função deve retornar a soma de a + b + c + d
+
+	-- Bind --
+
+1° Faça um objeto pessoa que tenha como atributo nome, ainda dentro do objeto pessoa, faça uma função mostrarNome, 
+dentro da função mostrarNome, imprima o atributo nome do objeto pessoa. agora chame a função falar de maneira literal e 
+por meio de uma variavel utilizando bind().  
+
+2° Faça uma função Pessoa que deve retorna acada 1 segundo um numero somado + 1 
+
+	-- Arrow Function --
+
+1° Faça uma Função do tipo Arrow que retorna o dobro de um determinado numero.
+
+2° Faça uma função em que o contexto lexico global == this
+3° Faça uma função em que o contexto lexico global != this
+4° Faça uma função em que o contexto lexico global == module.exports
+5° Mude o contexto lexico de uma função para module.exports
+
+	-- Functions Anonimas -- 
+
+1° Faça uma função com parâmetros, x e y, que retorne a soma de x + y
+
+
+	-- Functions Callback --
+
+1° Faça um foreach passando como parametro uma função, a função não pode ser criada dentro do foreach
+2° Faça um foreach passando como parametro o array, utilize arrow function
+3° Faça um array de 1 a 10, utilizando filter(), crie um outro array apenas com as notas menor que 6
+
+	-- Função Construtora --
+
+1° Faça uma função Carro que receberá como parametro (velocidadeMax , delta) dentro dessa função determine uma variavel let
+velocidadeAtual = 0, faça um if se velocidadeAtual + delta <= velocidadeMax, velocidadeAtual += delta se não velocidadeAtual
+= velocidadeMax, crie um metodo publico para retornar a velocidadeAtual. Agora crie um objeto e chame as funções.
+
+	-- Função Factory --
+
+1°Faça uma função que retorna um objeto, obs: o objeto deve ser criado dentro do return
+
+	-- Função Factory Vs Class --
+
+1°Faça uma class Pessoa, dentro dessa class crie uma funcao construtora que recebe nome como parametro, dentro dessa class
+Pessoa crie uma função falar que retorna a seginte mensagem, Meu nome é $nome.
+
+2°Crie uma variavel expression utilizando arrow function que recebe como parametro nome, faça uma função factory que 
+retorna o objeto falar, o objeto falar deve conter uma arrow function que retorna 'Meu nome é ${nome}'
+
+	-- Função construtora --
+
+1°Faça uma função construtora que recebe como parametro nome, dentro dessa função faça uma function falar, dentro dessa function falar
+faça com que ela retorne 'Meu nome é ${nome}', agora crie um objeto dessa função e chame a function falar().
+
+
+	-- Função construtora --
+
+1°Faça um função que imprime ola mundo e foge do escopo global window
+
+	-- Função Apply e Call --
+
+1° Faça um exemplo básico de Apply e Call
+
+

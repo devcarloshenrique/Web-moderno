@@ -1,0 +1,41 @@
+==============================================================
+	LENDO UM ARQUIVO JSON
+==============================================================
+
+OBS: para todos esse exemplos é necessário ter um arquivo.json, claro que com um json previamente feito.
+
+obs: __dirname == diretorio atual 
+
+	--- JSON SENDO LIDO DE MANÉIRA SINCRONA ---
+
+// v ai ler o json todo. não recomendado 
+
+
+const fs = require('fs')
+
+const caminho = __dirname + '/arquivo.json'
+
+const conteudo = fs.readFileSync(caminho , 'utf-8')
+
+console.log(conteudo)
+
+
+	--- JSON SENDO LIDO DE MANÉIRA ASSICRONA ---
+
+//Esse é utilizado passando uma callback para quando o arquivo //já tiver sido carregado
+
+const fs = require('fs')
+
+const caminho = __dirname + '/arquivo.json'
+
+fs.readFile(caminho, 'utf-8' , (err , conteudo) => {
+    const config = JSON.parse(conteudo)
+
+})
+
+
+	--- REQUIRINDO JSON EM FORMA DE OBJETO ---
+
+const config = require('./arquivo.json')
+
+console.log(config)

@@ -1,0 +1,17 @@
+	
+	-- instalação lodash --
+
+1 -- npm i lodash
+
+OBS: Toda biblioteca que for baixada via npm, será criado arquivos na pasta node_modules.
+	Quando for fazer a requisição de uma biblioteca que foi baixada via npm e está com seus arquivos na pasta node_modules, basta apenas chamar o nome da biblioteca, será puxado o arquivo index.php da biblioteca.
+
+
+	-- instalação nodemon --
+
+1 -- npm i -g nodemon 
+
+	-- Rodando nodemon
+
+1 -- npx nodemon nomeArquivo.js
+

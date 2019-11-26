@@ -1,0 +1,67 @@
+	-- CRIAÇÃO DE OBJETOS --
+
+OBS -- Todos os objetos devem ter os atributos, nome , sobrenome e mostrar nome()
+
+1 -- Faça um objeto usando notação Literal
+2 -- Faça um objeto utilizando (new Object)
+3 -- Faça um objeto por meio de funções construtoras
+4 -- Faça um objeto por meio de uma função Factory
+5 -- Faça um objeto utilizando (Object.create())
+6 -- Transforme um json em um Objeto (JSON.parse())	
+
+	-- OBJETOS CONSTANTES -- 
+
+1 -- Faça um objeto e utilize (Object.freeze())
+
+	-- GETTERS E SETTERS --
+
+1 -- Faça um exemplo de getters e setters
+
+	-- Funções Importantes Objetos --
+
+- -- Faça um objeto Pessoa, com os atributos nome , peso , idade , endereco
+- -- Utilize também forEach nas funções (keys , values , entries)
+
+1 -- Utilize no objeto pessoa a função (Object.keys)
+2 -- Utilize no objeto pessoa a função (Object.values)
+3 -- Utilize no objeto pessoa a função (Object.entries)
+4 -- Utilize no objeto pessoa a função (Object.defineProperty)
+5 -- Utilize no objeto pessoa a função (Object.assign)	
+
+	-- Object.PrototypeOf() --
+
+-- Faça um objeto Pessoa, que tem como atributo, nome, idade e status()
+
+1 -- Faça uma objeto pessoa1, que herda os atributos do objeto pessoa, utilize __proto__
+2 -- Faça uma objeto pessoa2, que herda os atributos do objeto pessoa, utilize Object.setPrototypeOf()
+
+	-- Object.create --
+
+-- Faça um objeto pai que terá os atributos nome e sobrenome
+
+1 -- Faça um objeto filho que terá como prototipo pai, o objeto filho deve ter os atributos sobrenome e status(), chame a função status do objeto filho
+2 -- Utilizando for in e hasOwnProperty(), faça uma verificação dos atributos que foram herdados ou não 
+
+	-- Herdando Hunções --
+
+1 -- 1 - Faça uma função MeuObjeto()
+  -- 2 - Crie os atributos nessa função nome = '' e falarNome()
+  -- 3 - Crie um obj1 e defina como prototipo MeuObjeto(), utilize new
+  -- 4 - Crie um obj2 e defina como prototipo MeuObjeto(), utilize __proto__ 
+  -- 5 - Crie um obj3 e defina como prototipo MeuObjeto(), utilize Object.create() 
+  -- 6 - Agora chame Obj1 , obj2 e obj3. Agora chame a função falarNome() de cada um e altere seus devidos nomes.
+
+2 - Faça um exemplo básico, utilizando prototype String e prototype Array
+
+	-- Evitando modificações nos objetos --
+
+1° Faça um exemplo utilizando Object.preventExtensions
+2° Faça um exemplo utilizando Object.seal
+
+		
+
+1° Faça um exemplo básico de json, dentro desse json faça uma array de objetos
+
+	-- Class --
+
+É melhor olhar no arquivo /Objeto/class1.js e replicar

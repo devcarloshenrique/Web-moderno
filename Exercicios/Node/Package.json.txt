@@ -1,0 +1,76 @@
+===========================================================================================================================
+	CONFIGURAÇÃO DO PACKAGE.JSON 
+===========================================================================================================================
+ 
+-- Criando a pasta Node_Modules e Configurando Arquivo package.json --
+
+	1 -- É necessário criar ou já previamente ter arquivo package.json
+		
+		-- Comando --
+	
+		npm init -y
+
+	2 -- Agora devemos instalar as depêndencias (criar a pasta node_modules)
+
+		-- Comando --
+		
+		1 -- Se o arquivo package.json estiver previamente configurado
+
+		npm i
+
+		2 -- Se o arquivo package.json tiver sido criado pela primeira vez a pasta node_modules não vai ser criada 
+pois não tem nenhuma dependência para ser baixada.
+
+		3 -- Instalando uma biblioteca especifica
+
+		npm i nomedaBiblioteca
+
+		4 -- Caso não tenha sido salvado as dependências no arquivo package.json 
+
+		npm i nomedaBiblioteca --save
+
+
+===========================================================================================================================
+	TERMOS ESPECIFICOS DE ATUALIZAÇÃO 
+===========================================================================================================================
+
+1 -- UTILIZANDO O ^ ~
+
+"dependencies": {
+
+    "axios": "^0.19.0" ====> essa versão pode ser atualizada só até a 0.99.9
+    "axios": "~0.19.0" ====> essa versão permite atualizar apenas até a 0.19.9 || atualiza para a mais proxima
+
+  }
+
+2 -- PARA CRIAR UM SCRIPT QUAL QUER E EXECUTAR É NECESSÁRIO UTILIZAR 
+
+	-- COMANDO --
+		npm run nomeDoAtributoJson
+
+	-- EXEMPLO --
+
+{
+  "name": "funcionarios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "functionarios.js",
+  "scripts": {
+    "start": "nodemon",
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  } 
+
+	-- PROMT DE COMANDO --
+	
+	npm run dev
+
+	OBS: Poderia ser qual quer nome em vez de dev, mas isso só ocorre por que dev é um script que não está definido, portanto posso renomealo.
+	
+	OBS2: OS script que não são necessário utilizar o "run" é por que estão previamentes definidos
+	
+	OBS3: é possivel ver os scripts predefinidos na documentação do node.
+
+
+
+
