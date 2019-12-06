@@ -1,7 +1,6 @@
 <h1>Formulário</h1>
 
 <form method="POST">
-<<<<<<< HEAD
     <input type="hidden" name="id" value="3">
     <input type="text" name="name">
     <input type="password" name="senha">
@@ -23,26 +22,6 @@
     </select>
 
     <select name="interesses" multiple size="7">
-=======
-	<input type="hidden" name="id" value="3">
-    <input type="text" name="name">
-    <input type="password" name="senha" id="">
-    <textarea name="bio" cols="30" rows="10"></textarea>
-    <div>
-    	<input type="radio" name="tipo" value="Admin"> Admin
-    	<input type="radio" name="tipo" value="Regular"> Regular
-
-    </div>
-    <div>
-    	<input type="checkbox" name="ativo" value="selecionado">		
-    </div>
-
-    <select name="estado" id="">
-    	<option value="ac">Acre</option>
-    	<option value="ce">Céara</option>
-    </select>
-       <select name="interesses" multiple size="7">
->>>>>>> 2dac22d... feat: Modulo 8 - Html 5
         <option value="js">Javascript</option>
         <option value="java">Java</option>
         <option value="php">PHP</option>
@@ -50,13 +29,9 @@
         <option value="go">Go</option>
         <option value="c">C</option>
     </select>
-<<<<<<< HEAD
 
     <button formaction="http://localhost:3003/usuarios">Incluir</button>
     <button formaction="http://localhost:3003/usuarios/3">Alterar</button>
-=======
-    <button formaction="http://localhost:3003/usuarios">Incluir</button>
->>>>>>> 2dac22d... feat: Modulo 8 - Html 5
 </form>
 
 <style>
@@ -66,14 +41,8 @@
         display: block;
         margin-bottom: 10px;
     }
-<<<<<<< HEAD
     input[type=radio],
     input[type=checkbox] {
         display: inline;
-=======
-
-    input[type=radio] {
-    	display: inline;
->>>>>>> 2dac22d... feat: Modulo 8 - Html 5
     }
 </style>

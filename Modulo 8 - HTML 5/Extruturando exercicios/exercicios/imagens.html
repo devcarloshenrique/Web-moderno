@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 2dac22d... feat: Modulo 8 - Html 5
 <div wm-slider>
     <p>
         <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg"
@@ -39,6 +43,7 @@
     </p>
 </div>
 
+<<<<<<< HEAD
 <style>
 
     .circular {
@@ -148,12 +153,32 @@
         margin-right: 10px;
     }
     .cidade {
+=======
+
+<style>
+    /*p {
+        position: absolute;
+        display: none;
+    }*/
+    /*.circular {
+        width: 513px;
+        background-color: #444;
+    }*/
+    /*.texto {
+        width: 400px;
+    }*/
+    /*.texto img {
+        margin-right: 10px;
+    }*/
+    /*.cidade {
+>>>>>>> 2dac22d... feat: Modulo 8 - Html 5
         width: 513px;
         height: 342px;
         background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: 200%;
+<<<<<<< HEAD
     }
 
 </style>
@@ -217,4 +242,44 @@
 
     slider()
 
+=======
+    }*/
+</style>
+
+<!-- <script>
+    function mover(elem, inicio, fim, passo, callback) {
+        const novoInicio = inicio - passo
+        if(novoInicio >= fim) {
+            elem.style.left = novoInicio + 'px'
+            setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 7)
+        } else {
+            callback()
+        }
+    }
+    // const p = document.querySelector('[wm-slider] > p')
+    // p.style.display = 'block'
+    // mover(p, 1500, -520, 5, () => {
+    //     console.log('Terminou!!!')
+    // })
+    function slider() {
+        const elementos = document.querySelectorAll('[wm-slider] > p')
+        const slides = Array.from(elementos)
+        exibirSlide(slides, slides[0])
+    }
+    function exibirSlide(slides, slide) {
+        slide.style.display = 'block'
+        const inicio = innerWidth
+        const fim = -slide.clientWidth
+        slide.style.left = `${inicio}px`
+        mover(slide, inicio, fim, 5, () => {
+            slide.style.display = 'none'
+            exibirSlide(slides, getProximo(slides, slide))
+        })
+    }
+    function getProximo(lista, atual) {
+        const i = lista.indexOf(atual) + 1
+        return i < lista.length ? lista[i] : lista[0]
+    }
+    slider()
+>>>>>>> 2dac22d... feat: Modulo 8 - Html 5
 </script> -->
