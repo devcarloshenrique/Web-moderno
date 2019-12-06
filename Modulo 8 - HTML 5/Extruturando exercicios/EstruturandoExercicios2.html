@@ -1,0 +1,37 @@
+<!-- npm i -g http-server -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercícios HTML</title>
+</head>
+<body>
+	<header>
+		Exercícios HTML
+	</header>
+	<nav>
+		<a href="" wp-link="exercicios/teste.html">Exercicio 00 - Teste
+		</a>
+		<br>
+		<a href="" wp-link="exercicios/teste2.html">Exercicio 00 - Teste
+
+	</nav>
+	<section id="conteudo"></section>
+	<footer>
+		<br>
+		Curso de Web Moderno
+	</footer>
+	<script>
+		document.querySelectorAll('[wp-link]').forEach(link => {
+		const conteudo = document.getElementById('conteudo')
+			link.onclick = function(e) {
+				e.preventDefault()
+				
+				fetch(link.getAttribute('wp-link'))
+					.then(resp => resp.text())
+					.then(html => conteudo.innerHTML = html)
+			}
+		})
+	</script>
+</body>
+</html>

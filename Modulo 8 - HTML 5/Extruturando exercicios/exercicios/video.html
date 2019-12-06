@@ -1,0 +1,58 @@
+<video width="850px" height="450px" controls autoplay controlslist="nodownload" id="video">
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+    Seu browser não suporta 
+</video>
+
+<div wm-progresso="meuVideo" class="progresso">
+	<div></div>
+</div>
+
+<div>
+	<button wp-play="meuVideo">Play</button>
+	<button wp-pause="meuVideo">Pause</button>
+</div>
+
+<style type="text/css">
+	.progresso {
+		height: 20px;
+		width: 500px;
+		border: solid 1px #444;
+		margin: 20px;
+	}
+
+	.progresso > div {
+		background-color: red;
+		color: #fff;
+		height: 100%;
+		width: 0%;
+		text-align: right;
+		font-size: 14px;
+	}
+</style>
+
+<script>
+
+	function progressoVideo () {
+
+
+		var barra = document.querySelector(".progresso > div")
+		
+		var video = document.getElementById("video");
+
+		document.querySelector('[wp-play]').onclick = () => video.play() 
+		document.querySelector('[wp-pause]').onclick = () => video.pause() 
+
+		setInterval(() => {
+
+			percentual = (video.currentTime * 100)/video.duration;
+
+			barra.style.width = `${percentual}%`;
+		
+		},1);
+
+	}
+
+	progressoVideo();
+
+</script>
+

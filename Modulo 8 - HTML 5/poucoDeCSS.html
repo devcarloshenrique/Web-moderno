@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="ENDERECO_CSS.css">
+	<style>
+		h1 {
+			/*display: none;*/
+			/*background-color: red;*/
+			/*position: absolute;*/
+			/*top: 400px;*/
+			/*left: 400px;*/
+			/*font-size: 20px;*/
+		}
+
+		.fundoVermelho {
+			/*background-color: red;*/
+		}
+		
+		#textoPrincipal {
+			font-size: 40px;
+			font-weight: bold;
+			color: #fff;
+			padding:10px;
+			background-color: #444;
+		}
+
+		.negrito {
+			font-weight: bold;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>CSS</h1>
+	<span id="textoPrincipal" >Texto 1</span><br><br><br>
+	<span class="fundoVermelho negrito">Texto 2</span><br>
+	<span class="fundoVermelho">Texto 2</span>
+
+
+	<!--  Chamando atributo personalizado via JS -->
+	<!-- document.querySelector('[wp-atribute]') -->
+	<span wp-atribute></span>
+	
+</body>
+</html>

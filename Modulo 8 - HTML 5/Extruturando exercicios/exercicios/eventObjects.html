@@ -1,0 +1,45 @@
+<li class="folder folder-open Selected">
+TesteNfseSPO
+<ul>
+    <li class="file">TesteNfseSPO.sln</li>
+    <li class="folder">TesteNfseSPO
+        <ul>
+            <li class="file">TesteNfseSPO.csproj</li>
+            <li class="file">Program.cs</li>
+            <li class="file">app.config</li>
+            <li class="folder">Properties
+                <ul>
+                    <li class="file">AssemblyInfo.cs</li>
+                </ul>
+            </li>
+            <li class="folder">bin
+                <ul>
+                    <li class="folder">Debug
+                        <ul>
+                            <li class="file">NfseSPO.dll</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="folder">obj
+                <ul>
+                    <li class="folder">Debug</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<div id="ItemSelected"></div>
+
+<script>
+	var items = document.querySelectorAll('.file');
+	console.log(items)
+
+//Depois no loop adicionamos o evento para cada elemento
+for(var i = 0; i < items.length; i++)
+  items[i].addEventListener('click', function(e) {    
+    document.getElementById("ItemSelected").innerHTML = this.textContent;
+    e.stopPropagation();
+  });
+</script>

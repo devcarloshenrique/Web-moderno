@@ -1,0 +1,81 @@
+<ul class="tree">
+<h1>Projeto</h1>
+    <li>
+        <span>backend</span>
+        <ul>
+            <li>
+                <span>app</span>
+                <ul>
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li>
+                <span>config</span>
+                <ul>
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span>frontend</span>
+        <ul>
+            <li>
+            <span>public</span>
+            <ul>
+                <li>app.css</li>
+                <li>app.js</li>
+                <li>index.html</li>
+            </ul>
+        </li>
+    </ul>
+</li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+<script type="text/javascript">
+
+/* Meu scriptor */
+
+    // var span = document.querySelectorAll('span')
+    // var ul = document.querySelectorAll('ul');
+
+    // for(let i = 1 ; i < ul.length ; i++){
+
+    //     span[i - 1].addEventListener('click' , function () {
+            
+    //         if(ul[i].style.display == 'none'){
+
+    //             ul[i].style.display = 'block'
+
+    //         } else {
+
+    //             ul[i].style.display = 'none'
+
+    //         }
+
+    //     })
+
+    // }
+
+/* Scriptor Professor */
+
+    document.querySelectorAll('span').forEach(folder => {
+        
+        folder.onclick = function() {
+
+        const ul = folder.nextElementSibling
+        
+        const style = ul.style.display
+
+        ul.style.display = style === 'none' ? 'block' : 'none'
+
+        }
+    })
+
+</script>

@@ -1,0 +1,10 @@
+npm i -g http-server
+
+//Inicializando servidor
+	http-server .
+
+//Inicializando em uma porta especifica
+	http-server -p 9090 .
+
+//Desabilitando cache
+	http-server -c-1 .

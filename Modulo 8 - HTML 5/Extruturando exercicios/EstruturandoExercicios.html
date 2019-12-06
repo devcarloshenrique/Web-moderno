@@ -1,0 +1,59 @@
+<!-- npm i -g http-server -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercícios HTML</title>
+</head>
+<body>
+	<header>
+		Exercícios HTML
+	</header>
+	<nav>
+		<a href="exercicios/teste.html">Exercicio 00 - Teste</a>
+		<br>
+		<a href="exercicios/texto1.html">Exercicio 01 - Teste</a>
+		<br>
+		<a href="exercicios/texto2.html">Exercicio 02 - Teste</a>
+		<br>
+		<a href="exercicios/lista.html">Exercicio 03 - Teste</a>
+		<br>
+		<a href="exercicios/listaAlinhada.html">Exercicio 04 - Teste</a>
+        <br>
+		<a href="exercicios/links.html">Exercicio 05 - Teste</a>
+		<br>
+		<a href="exercicios/table.html">Exercicio 06 - Teste</a>
+		<br>
+		<a href="exercicios/imagens.html">Exercicio 07 - Teste</a>
+		<br>
+		<a href="exercicios/video.html">Exercicio 08 - Teste</a>
+		<br>
+		<a href="exercicios/tagsNaoVisuais.html">Exercicio 09 - Teste</a>
+		
+		
+
+		
+				
+
+
+
+	</nav>
+	<section id="conteudo"></section>
+	<footer>
+		<br>
+		Curso de Web Moderno
+	</footer>
+	<script>
+		document.querySelectorAll('a').forEach(link => {
+		const conteudo = document.getElementById('conteudo')
+			link.onclick = function(e) {
+				e.preventDefault()
+				
+				fetch(link.href)
+					.then(resp => resp.text())
+					.then(html => conteudo.innerHTML = html)
+			}
+		})
+	</script>
+</body>
+</html>
