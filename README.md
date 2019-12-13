@@ -4,6 +4,26 @@
    
    ## Índice
    
+   ### JavaScript
+   
+   #### Array 
+   
+   1. [Array literal.](#array-literal)
+   2. [Array push](#array-push)
+   3. [Array pop](#array-pop)
+   4. [Array ForEach](#array-foreach)
+   5. [Array com split](#array-split)
+   
+   #### Funções 
+   
+   1. [Função dentro de variavel](#funcao-dentro-de-variavel)
+   2. [Arrow function](#arrow-function)
+   
+   #### Objeto
+   
+   1. [Criando objeto de forma literal](#criando-objeto-de-forma-literal)
+   2. [Criando função dentro de objeto](#criando-funcao-dentro-de-objeto)
+   
    ### Css
    1. [Anatomia Css.](#anatomia-css)
    2. [Estilos Css Interno, Externo e Inline.](#estilos-css)
@@ -14,32 +34,135 @@
    7. [Box Model.](#box-model)
    8. [Margin Collapsing](#margin-collapsing)
    
-   ## <a name="anatomia-css">1. Anatomia Css.</a>
    
-   ### Conceito
+   ### JavaScript
+   
+   #### Array
+   
+   #### <a name="#array-literal">1. Criando array de forma literal.</a>
+   
+   ``` 
+   const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+   
+   ```
+   #### <a name="#array-push">2. Array push.</a>
+   
+   ``` 
+   const array = [1, 2, 3]
+   
+   array.push(4, '5')
+   
+   array = [1, 2, 3, 4, 5]
+   ```
+   #### <a name="#array-pop">3. Array pop.</a>
+   
+   ``` 
+   const array = [1, 2, 3, 4, 5]
+   
+   array.pop()
+   
+   array = [1, 2, 3, 4]
+   ```
+   #### <a name="#array-foreach">4. Array ForEach.</a>
+   
+   ```
+      Array7.forEach(function (Valor, Chave, Array) {
+    
+      console.log(`Valor ${Valor} Chave ${Chave} Array => ${Array}`)
+    
+      })
+      
+   ```
+   #### <a name="#array-split">5. Array com split.</a>
+   
+   ```
+   const string = 'Carlos,Ana,Milton,Hudson,Rogerio'
+   
+   const array = string.split(',')
+   
+   array = [ 'Carlos', 'Ana', 'Milton', 'Hudson', 'Rogerio' ]
+   
+   ```
+   
+   #### Funções
+   
+   #### <a name="#funcao-dentro-de-variavel">1. Função dentro de variável</a>
+   
+   ```
+      const funcao = function(){
+         console.log('Ola');
+      }
+      
+   ```
+   
+   #### <a name="#arrow-function">2. Arrow function</a>
+   
+   ```
+      const funcao = (a) => {
+         console.log(a);
+      }
+      
+   ```
+   
+   #### Objeto
+   
+   #### <a name="#criando-objeto-de-forma-literal">1. Criando objeto de forma literal.</a>
+   
+   ``` 
+      const obj = {}
+      
+      obj.nome = 'Carlos';
+      
+      obj.['sobrenome'] = 'Henrique';
+      
+   ```
+   
+   #### <a name="#criando-funcao-dentro-de-objeto">2. Criando função dentro de um objeto. </a>
+   
+   ```
+      const obj = {
+      
+      mostrar: function() {
+      
+         console.log('Ola mundo');
+      
+      }
+      
+      }
+   ```
+   
+   
+   
+   
+   
+   ### CSS
+   
+   #### <a name="anatomia-css">1. Anatomia Css.</a>
+   
+   #### Conceito
    
    O CSS estipula regras para o arquivo em html. Com cada regra é possível estilizar o conteúdo todo ou somente determinados elementos. Por isso entenda, um comando básico é composto por seletor e declarações, que contém propriedade e valor.
     
          Exemplo: 
             SELETOR {PROPRIEDADE: VALOR}
    
-   ## <a name="estilos-css">2. Estilos Css Interno, Externo e Inline.</a>
+   ### <a name="estilos-css">2. Estilos Css Interno, Externo e Inline.</a>
    
-   ### - Css Interno
+   #### - Css Interno
          
    Estilos CSS feitos desta forma são carregados cada vez que um site é atualizado, o que pode aumentar o tempo de carregamento.
    
-   ### - Css Externo
+   #### - Css Externo
          
    Tudo é feito externamente em um arquivo .css. Isso significa que você pode fazer todo o estilo em um arquivo separado e aplicar o CSS a qualquer página desejada.
    
-   ### - Css Inline
+   #### - Css Inline
          
    Inline trabalha com elementos específicos que possuem a tag <style>. Cada componente deve ser estilizado, por isso talvez não seja o melhor ou o mais rápido para lidar com CSS.
    
       Exemplo:
          <p style="padding: 100px;">Lorem...</p>
-   ## <a name="integracao-css">3. Integrando Css em página HTML.</a>
+   ### <a name="integracao-css">3. Integrando Css em página HTML.</a>
    
    E é com tags de referência que você avisa ao HTML que existe um arquivo de estilo para ele, veja:
       
@@ -47,7 +170,7 @@
          <link rel=”stylesheet” type=”text/css” href=”estilo.css”>
    Esta tag vai indicar ao HTML que tem um arquivo CSS para ser adicionado à  página. Isto deve ser adicionado dentro da tag <head> </head> do seu HTML.
    
-   ## <a name="seletores-css">4. Seletores Css e suas variações.</a>
+   ### <a name="seletores-css">4. Seletores Css e suas variações.</a>
    
    No CSS, este código inteiro é uma regra. Esta regra inicia com strong, que é um seletor.
    
@@ -56,12 +179,12 @@
             color: red;
          }  
          
-   ### - Tipos de Seletores
+   #### - Tipos de Seletores
    
       Exemplo:
          <p class="chave" id="principal">
    
-   ### - Seletores com Classe
+   #### - Seletores com Classe
    
    Em seu CSS, digite um ponto final antes do nome da classe para usar como um seletor.
       
@@ -70,7 +193,7 @@
             color: green;
          }
    
-   ### - Seletores com ID
+   #### - Seletores com ID
    
    Em seu CSS, digite cerquilha (#) antes do ID quanto estiver usando em um seletor ID.
      
@@ -104,7 +227,7 @@
       img[src$=".png"]
       IIndiretamente seleciona imagens PNG; qualquer imagem que seja PNG mas que a URL não termine em ".png" (como quando elas são uma query string) não serão selecionadas.
       
-   ###  Seletores de pseudo-classes
+   ####  Seletores de pseudo-classes
    
    Uma pseudo-classe em CSS é uma palavra-chave adicionada aos seletores que especifica um estado especial do elemento a ser selecionado. Por exemplo  :hover, aplicará um estilo quando o usuário passar o mouse sobre o elemento especificado pelo seletor.
    
@@ -116,9 +239,9 @@
 
    - [Nth-child](https://www.w3schools.com/cssref/sel_nth-child.asp)
    
-   ## <a name="especificidade-css">5. Especificidade Css</a>
+   ### <a name="especificidade-css">5. Especificidade Css</a>
    
-   ### Conceito
+   #### Conceito
    
    A especificação é a maneira de como os navegadores definem quais valores de propriedades são os mais relevantes para o elemento a ser utilizado. A especificação é baseada apenas nas regras impostas na composição de diferentes tipos de seletores.
    
@@ -135,11 +258,11 @@
    
    - [Specificity Calculator](https://specificity.keegan.st/)
    
-   ### A exceção **!important**
+   #### A exceção **!important**
    
    Quando a regra **!important** é utilizada na declaração do estilo substitui qualquer outra declaração feita no CSS, onde quer que esteja na lista de declaração. Contudo, !important não tem nada haver com especificação.
    
-   ## <a name="heranca-css">6. Herança Css</a>
+   ### <a name="heranca-css">6. Herança Css</a>
    
    No CSS você herda as regras de um elemento pai.
    
@@ -155,7 +278,7 @@
    
    -  [Entendendo os valores ‘initial’ e ‘inherit’ do CSS](https://tableless.com.br/entendendo-os-valores-initial-e-inherit-do-css/)
    
-   ## <a name="box-model">7. Seletores Css e suas variações.</a>
+   ### <a name="box-model">7. Seletores Css e suas variações.</a>
    
    Todos os elementos HTML podem ser considerados como caixas. No CSS, o termo "modelo de caixa" é usado quando se fala em design e layout.
    
@@ -174,21 +297,21 @@
             }
             
             
-   ## <a name="margin-collapsing">8. Margin Collapsing.</a>
+   ### <a name="margin-collapsing">8. Margin Collapsing.</a>
 
-   ## Conceito
+   #### Conceito
    
    As margens superior e inferior dos blocos às vezes são combinadas(colapsadas/reduzidas) para uma única margem cujo o tamanho é a maior das margens (se os elementos tiverem a mesma margem, uma delas não será somada), combinado a ele, um comportamento conhecido como **margin collapsing**.
    
-   ### - Irmãos adjacentes
+   #### - Irmãos adjacentes
    
 As margens de irmãos adjacentes são colapsadas (execeto quando  o último irmão precisar ser limpado devido ao uso de floats  em elementos anteriores ).
    
-   ### - Pai e primeiro/último filho
+   #### - Pai e primeiro/último filho
    
    Se não houver border, padding, parte inline, contexto de formatação de bloco criado ou livre para separar o margin-top de um bloco do margin-top do seu primeiro bloco filho, ou nenhum border, padding, conteúdo inline, height, min-height, ou max-height para separar o  margin-bottom de um bloco do margin-bottom do seu último filho, então essas margens colapsam. A margem colapsada acaba fora do pai.
    
-   ### - Blocos vázios
+   #### - Blocos vázios
    
    Se não houver border, padding, conteúdo inline, height, ou  min-height para separar um bloco margin-top de sua margin-bottom, então as margens superior e inferior são colapsadas.
    
@@ -197,7 +320,7 @@ As margens de irmãos adjacentes são colapsadas (execeto quando  o último irm�
    
    Carlos está digitando...
       
-   ## Autor
+   ### Autor
 
 | [<img src="https://avatars2.githubusercontent.com/u/57951744?s=180&v=4"><br><sub>@devcarloshenrique</sub>](https://github.com/devcarloshenrique) |
 | :---: |
