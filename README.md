@@ -55,7 +55,7 @@
    
    #### Estrutura de controle
 
-   <a name="for-in">1.</a>
+   <a name="for-in">1. For-in</a>
    
    ```
    var person = {fname:"John", lname:"Doe", age:25};
@@ -72,7 +72,7 @@
 
    ```
    
-   <a name="for-of">2.</a>
+   <a name="for-of">2. For-of</a>
       
    ```
    
@@ -88,7 +88,7 @@
    
    ```
    
-   <a name="for">3.</a>
+   <a name="for">3. For</a>
       
    ```
    
@@ -104,13 +104,13 @@
    
    ```
    
-   <a name="while">4.</a>
+   <a name="while">4. While</a>
       
    ```
    
    ```
    
-   <a name="do-while">5.</a>
+   <a name="do-while">5. Do-While</a>
       
    ```
    var text = "";
@@ -127,7 +127,7 @@
    
    ```
    
-   <a name="if-else">6.</a>
+   <a name="if-else">6. If else</a>
       
    ```
    
@@ -141,7 +141,7 @@
    
    ```
    
-   <a name="switch-case">7.</a>
+   <a name="switch-case">7. Switch case</a>
       
    ```
    
@@ -174,8 +174,7 @@
        text = "I have never heard of that fruit...";
    }
    
-   ```
-   
+   ```   
    
    #### Array
    
