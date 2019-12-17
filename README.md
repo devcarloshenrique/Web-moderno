@@ -6,6 +6,17 @@
    
    ### JavaScript
    
+   #### Estruturas de controle
+   
+   1. [For in](#for-in)
+   2. [For of](#for-of)
+   3. [For](#for)
+   4. [While](#while)
+   5. [Do while](#do-while)
+   6. [If else](#if-else)
+   7. [Switch Case](#switch-case)
+   
+   
    #### Array 
    
    1. [Array literal.](#array-literal)
@@ -13,16 +24,21 @@
    3. [Array pop](#array-pop)
    4. [Array ForEach](#array-foreach)
    5. [Array com split](#array-split)
+   6. [Array com operador destructuring](#utilizando-operador-destructuring-com-array)
    
    #### Funções 
    
    1. [Função dentro de variavel](#funcao-dentro-de-variavel)
    2. [Arrow function](#arrow-function)
+   3. [Function Factory](#function-factory)
    
    #### Objeto
    
    1. [Criando objeto de forma literal](#criando-objeto-de-forma-literal)
    2. [Criando função dentro de objeto](#criando-funcao-dentro-de-objeto)
+   3. [Criando objeto de função](#criando-objeto-de-funcao)
+   4. [Utilizando destructuring com objeto](#utilizando-destructuring-com-objeto)
+   
    
    ### Css
    1. [Anatomia Css.](#anatomia-css)
@@ -37,15 +53,139 @@
    
    ### JavaScript
    
+   #### Estrutura de controle
+
+   <a name="for-in">1.</a>
+   
+   ```
+   var person = {fname:"John", lname:"Doe", age:25};
+
+   var text = "";
+   
+   var x;
+   
+   for (x in person) {
+   
+      text += person[x] + " ";
+   
+   }
+
+   ```
+   
+   <a name="for-of">2.</a>
+      
+   ```
+   
+   var cars = ['BMW', 'Volvo', 'Mini'];
+   
+   var x;
+
+   for (x of cars) {
+
+      document.write(x + "<br >");
+
+   }
+   
+   ```
+   
+   <a name="for">3.</a>
+      
+   ```
+   
+   var text = "";
+   
+   var i;
+   
+   for (i = 0; i < 5; i++) {
+  
+      text += "The number is " + i + "<br>";
+   
+   }
+   
+   ```
+   
+   <a name="while">4.</a>
+      
+   ```
+   
+   ```
+   
+   <a name="do-while">5.</a>
+      
+   ```
+   var text = "";
+
+   var i = 0;
+
+   while (i < 5) {
+   
+      text += "<br>The number is " + i;
+      
+      i++;
+   
+   }
+   
+   ```
+   
+   <a name="if-else">6.</a>
+      
+   ```
+   
+   var time = new Date().getHours();
+   
+   if (time < 20) {
+  
+      document.getElementById("demo").innerHTML = "Good day";
+
+   }
+   
+   ```
+   
+   <a name="switch-case">7.</a>
+      
+   ```
+   
+   var text = "Banana";
+
+   var fruits = document.getElementById("myInput").value;
+
+   switch(fruits) {
+
+     case "Banana":
+
+       text = "Banana is good!";
+
+       break;
+
+     case "Orange":
+
+       text = "I am not a fan of orange.";
+
+       break;
+
+     case "Apple":
+
+       text = "How you like them apples?";
+
+       break;
+
+     default:
+
+       text = "I have never heard of that fruit...";
+   }
+   
+   ```
+   
+   
    #### Array
    
-   #### <a name="#array-literal">1. Criando array de forma literal.</a>
+   #### <a name="array-literal">1. Criando array de forma literal.</a>
    
    ``` 
    const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
    
    ```
-   #### <a name="#array-push">2. Array push.</a>
+   #### <a name="array-push">2. Array push.</a>
    
    ``` 
    const array = [1, 2, 3]
@@ -53,8 +193,9 @@
    array.push(4, '5')
    
    array = [1, 2, 3, 4, 5]
+   
    ```
-   #### <a name="#array-pop">3. Array pop.</a>
+   #### <a name="array-pop">3. Array pop.</a>
    
    ``` 
    const array = [1, 2, 3, 4, 5]
@@ -63,17 +204,17 @@
    
    array = [1, 2, 3, 4]
    ```
-   #### <a name="#array-foreach">4. Array ForEach.</a>
+   #### <a name="array-foreach">4. Array ForEach.</a>
    
    ```
       Array7.forEach(function (Valor, Chave, Array) {
     
-      console.log(`Valor ${Valor} Chave ${Chave} Array => ${Array}`)
+         console.log(`Valor ${Valor} Chave ${Chave} Array => ${Array}`)
     
       })
       
    ```
-   #### <a name="#array-split">5. Array com split.</a>
+   #### <a name="array-split">5. Array com split.</a>
    
    ```
    const string = 'Carlos,Ana,Milton,Hudson,Rogerio'
@@ -84,29 +225,58 @@
    
    ```
    
+   #### <a name="utilizando-operador-destructuring-com-array">6. Utilizando operador destructuring com array </a>
+   
+   ```
+      const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, [11, 12, 13]]
+
+      const [valor1, , , , , , , , , , valor2] = array
+      
+      console.log(valor1 + valor2)
+   
+   ```
+   
+   
+   
+   
    #### Funções
    
-   #### <a name="#funcao-dentro-de-variavel">1. Função dentro de variável</a>
+   #### <a name="funcao-dentro-de-variavel">1. Função dentro de variável</a>
    
    ```
       const funcao = function(){
+      
          console.log('Ola');
+         
       }
       
    ```
    
-   #### <a name="#arrow-function">2. Arrow function</a>
+   #### <a name="arrow-function">2. Arrow function</a>
    
    ```
       const funcao = (a) => {
+      
          console.log(a);
+      
       }
       
+   ```
+      
+   #### <a name="function-factory">3. Function factory </a>
+   
+   ```
+   function mostrar(nome, sobrenome) {
+   
+      return {nome, sobrenome}
+   
+   }
+   
    ```
    
    #### Objeto
    
-   #### <a name="#criando-objeto-de-forma-literal">1. Criando objeto de forma literal.</a>
+   #### <a name="criando-objeto-de-forma-literal">1. Criando objeto de forma literal.</a>
    
    ``` 
       const obj = {}
@@ -117,22 +287,56 @@
       
    ```
    
-   #### <a name="#criando-funcao-dentro-de-objeto">2. Criando função dentro de um objeto. </a>
+   #### <a name="criando-funcao-dentro-de-objeto">2. Criando função dentro de um objeto. </a>
    
    ```
       const obj = {
       
-      mostrar: function() {
-      
-         console.log('Ola mundo');
+         mostrar: function() {
+
+            console.log('Ola mundo');
+
+         }
       
       }
       
-      }
+   ```
+
+   #### <a name="#criando-objeto-de-funcao">3. Criando objeto de uma função</a>
+   
+   ```
+   function mostrar() {
+       
+       this.nome = 'Carlos'
+       
+       this.funcao = function () {
+           
+           console.log('Ola Mundo')
+       
+       }
+    
+    }
+    
+    const objeto = new mostrar()
+    
+    objeto.funcao()
+    
    ```
    
+   <a name="utilizando-destructuring-com-objeto">4. Utilizando operador destructuring com objeto </a>
    
+   ```
+   const objeto = {
+      nome: "Carlos",
+      sobrenome: "Henrique"
+   }
    
+   const {nome: n, sobrenome: s} = objeto
+   
+   console.log(n + " " + s)
+   
+   ```
+ 
    
    
    ### CSS
@@ -206,6 +410,7 @@
    
    Dentro dos colchetes você insere o nome do atributo, opcionalmente seguido por um operador correspondente e um valor. Além disso, a seleção pode ser feita case-insensitive adicionando um "i" depois do valor, mas nem todos os browsers suportam esta funcionalidade ainda.
 
+   ```
       [disabled]
       Seleciona todos os elementos com o atributo "disabled".
       
@@ -226,7 +431,9 @@
       
       img[src$=".png"]
       IIndiretamente seleciona imagens PNG; qualquer imagem que seja PNG mas que a URL não termine em ".png" (como quando elas são uma query string) não serão selecionadas.
-      
+   
+   ```
+   
    ####  Seletores de pseudo-classes
    
    Uma pseudo-classe em CSS é uma palavra-chave adicionada aos seletores que especifica um estado especial do elemento a ser selecionado. Por exemplo  :hover, aplicará um estilo quando o usuário passar o mouse sobre o elemento especificado pelo seletor.
@@ -288,14 +495,14 @@
    -  **Preenchimento** - Limpa uma área ao redor do conteúdo. O estofamento é transparente
    -  **Borda** - uma borda que circunda o preenchimento e o conteúdo
    -  **Margem** - Limpa uma área fora da borda. A margem é transparente
-   
-            div {
-              width: 300px;
-              border: 15px solid green;
-              padding: 50px;
-              margin: 20px;
-            }
-            
+   ```
+      div {
+        width: 300px;
+        border: 15px solid green;
+        padding: 50px;
+        margin: 20px;
+      }
+   ```
             
    ### <a name="margin-collapsing">8. Margin Collapsing.</a>
 
