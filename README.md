@@ -15,6 +15,7 @@
    5. [Do while](#do-while)
    6. [If else](#if-else)
    7. [Switch Case](#switch-case)
+   8. [ForEach](#foreach)
    
    
    #### Array 
@@ -28,9 +29,18 @@
    
    #### Funções 
    
-   1. [Função dentro de variavel](#funcao-dentro-de-variavel)
-   2. [Arrow function](#arrow-function)
-   3. [Function Factory](#function-factory)
+   1. [Função dentro de variavel.](#funcao-dentro-de-variavel)
+   2. [Arrow function.](#arrow-function)
+   3. [Function Factory.](#function-factory)
+   4. [Definindo que o escopo da função é um objeto.](#definindo-que-o-escopo-da-funcao-e-um-objeto)
+   5. [Passando função por parametro.](#passando-funcao-por-parametro)
+   6. [for in arguments.](#for-in-arguments)
+   7. [Utilizando bind para definir o escopo de uma função.](#utilizando-bind-para-definir-o-escopo-de-uma-funcao)
+   8. [Entendendo o this.](#entendendo-o-this)
+   9. [Criando uma Class](#criando-uma-class)
+   10. [Utilizando Apply e Call para definir o escopo de uma função](#utilizando-apply-e-call-para-definir-o-escopo-de-uma-funcao)
+   
+
    
    #### Objeto
    
@@ -55,7 +65,7 @@
    
    #### Estrutura de controle
 
-   <a name="for-in">1. For-in</a>
+   #### <a name="for-in">1. For-in</a>
    
    ```
    var person = {fname:"John", lname:"Doe", age:25};
@@ -72,7 +82,7 @@
 
    ```
    
-   <a name="for-of">2. For-of</a>
+   #### <a name="for-of">2. For-of</a>
       
    ```
    
@@ -88,7 +98,7 @@
    
    ```
    
-   <a name="for">3. For</a>
+   #### <a name="for">3. For</a>
       
    ```
    
@@ -104,13 +114,7 @@
    
    ```
    
-   <a name="while">4. While</a>
-      
-   ```
-   
-   ```
-   
-   <a name="do-while">5. Do-While</a>
+   #### <a name="while">4. While</a>
       
    ```
    var text = "";
@@ -127,7 +131,27 @@
    
    ```
    
-   <a name="if-else">6. If else</a>
+   #### <a name="do-while">5. Do-While</a>
+      
+   ```
+   
+      var text = "";
+
+      var i = 0;
+      
+      do {
+      
+         text += "The number is " + i;
+      
+         i++;
+      
+      }
+      
+      while (i < 5);
+   
+   ```
+   
+   #### <a name="if-else">6. If else</a>
       
    ```
    
@@ -141,7 +165,7 @@
    
    ```
    
-   <a name="switch-case">7. Switch case</a>
+   #### <a name="switch-case">7. Switch case</a>
       
    ```
    
@@ -174,7 +198,21 @@
        text = "I have never heard of that fruit...";
    }
    
-   ```   
+   ```
+   
+   #### <a name="foreach">8. ForEach </a>
+   
+   ```
+   
+   const array = [1 ,2 ,3 ,4 ,5]
+   
+   array.forEach((valor, chave, array) => {
+   
+   console.log(`[ ${chave} ] ` => ${valor})
+   
+   })
+
+   ```
    
    #### Array
    
@@ -235,9 +273,6 @@
    
    ```
    
-   
-   
-   
    #### Funções
    
    #### <a name="funcao-dentro-de-variavel">1. Função dentro de variável</a>
@@ -272,6 +307,189 @@
    }
    
    ```
+   #### <a name="definindo-que-o-escopo-da-funcao-e-um-objeto">4. Definindo um objeto como escopo da função</a>
+   
+   ```
+   function mostrar() {
+   
+      return console.log(`Ola meu nome é ${nome}`)
+   
+   }
+   
+   const objeto = {
+   
+      nome: 'Carlos Henrique'
+   
+   }
+   
+   objeto.mostrar();
+   
+   ```
+   #### <a name="passando-funcao-por-parametro">5. Passando uma função como parâmetro.</a>
+   
+   ```
+   function imprimir(mensagem) {
+   
+      mensagem();
+   
+   }
+   
+   imprimir( () => { console.log('chamando function mensagem'); })
+   
+   ```
+   
+   #### <a name="for-in-arguments">6. For-in arguments </a>
+   
+   ```
+   function soma() {
+   
+   let soma = 0
+   
+   for (i in arguments){
+   
+      soma += arguments[i]
+   
+   }
+      
+   return soma
+   
+   }
+   
+   ```
+   
+   #### <a name="utilizando-bind-para-definir-o-escopo-de-uma-funcao">7. Utilizando bind para definir o escopo de uma função. </a>
+   
+   ```
+      cosnt objeto = {
+
+         nome: 'Carlos',
+
+         mostrarNome() {
+
+            console.log(this.nome)
+
+         }
+      
+      }
+      
+      const falar = objeto.mostrarNome.bind(objeto)
+      
+      falar()
+   
+   ```
+   
+   #### Exemplo 2 
+   
+   ```
+   function idade() {
+
+      this.idade = 0
+
+      setInterval(function () {
+
+         this.idade++
+
+         console.log(this.idade)
+
+      }.bind(this), 1000)
+      
+   }
+   
+   idade()
+   
+   ```
+   
+   #### <a name="entendendo-o-this">8. Entendendo o this</a>
+   
+   ```
+   
+   console.log(this === global) // false
+   
+   console.log(this === module) // false
+
+   console.log(this === module.exports) //true
+   
+   console.log(this === exports) //true
+
+   function Thislog() {
+
+       console.log(this === module.exports) // false
+       
+       console.log(this === global) // true
+       
+       console.log(this === exports) // false
+
+   }
+
+   Thislog()
+   
+   ```
+   
+   #### <a name="criando-uma-class">9. Criando uma class</a>
+   
+   ```
+   class Pessoa {
+   
+      constructor(nome) {
+      
+         this.nome = 'Carlos'
+         
+      }
+      
+      mostrarNome() {
+      
+         console.log(`Meu nome é ${this.nome}`)
+      
+      }
+   
+   }
+   
+   const objeto = new Pessoa('Carlos')
+   
+   objeto.mostrarNome();
+   
+   ```
+   
+   #### <a name="utilizando-apply-e-call-para-definir-o-escopo-de-uma-funcao">10. Utilizando Apply e Call </a>
+   
+   ```
+
+   function valor(imposto = 0, moeda = 'R$') {
+
+      return `${moeda} ${this.preco  * (1 - this.desc) * (1 + imposto)}`
+
+   }
+
+   const obj4 = {
+      preco: 5000,
+      moeda: '$',
+      desc: 0.15,
+      imposto: 0.15,
+      valor
+   }
+
+   //Sem utilizar Call ou Apply
+
+   console.log(obj4.valor(0.20, '$')) // $ 5100
+
+   //Não é recomendado, utilizar a variavel global.
+   
+   global.preco = 5000
+
+   global.desc = 0.15
+
+   console.log(valor(0.20, '$')) // $ 5100
+
+   //utilizando Call ou Apply
+
+   console.log(valor.apply(obj4 , [0.20 , '$'])) // $ 5100
+
+   console.log(valor.call(obj4 , 0.20 , '$')) // $ 5100
+   
+   ```
+   
+   
+   
    
    #### Objeto
    
@@ -322,7 +540,7 @@
     
    ```
    
-   <a name="utilizando-destructuring-com-objeto">4. Utilizando operador destructuring com objeto </a>
+   #### <a name="utilizando-destructuring-com-objeto">4. Utilizando operador destructuring com objeto </a>
    
    ```
    const objeto = {
