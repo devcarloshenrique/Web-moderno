@@ -50,7 +50,14 @@
    2. [Criando função dentro de objeto](#criando-funcao-dentro-de-objeto)
    3. [Criando objeto de função](#criando-objeto-de-funcao)
    4. [Utilizando destructuring com objeto](#utilizando-destructuring-com-objeto)
-   
+   5. [New object](#new-object)
+   6. [Criando um objeto por meio de uma função factory](#criando-um-objeto-por-meio-de-uma-funcao-factory)
+   7. [Object freeze](#object-freeze)
+   8. [Getters e Setters](#getters-setters)
+   9. [Object keys, values e entries](#object-keys-values-entries)
+   10. [Object prototype](#object-prototype)
+
+
    
    ### Css
   
