@@ -1,3 +1,5 @@
+
+
 # Exercicios do curso [Web Moderno](https://www.udemy.com/course/curso-web/)
    
    - Este repositorio foi criado com o objetivo de enfatizar os **principais conhecimentos** adquiridos no curso [Web Moderno](https://www.udemy.com/course/curso-web/).
@@ -15,6 +17,7 @@
    5. [Do while](#do-while)
    6. [If else](#if-else)
    7. [Switch Case](#switch-case)
+   8. [ForEach](#foreach)
    
    
    #### Array 
@@ -28,9 +31,18 @@
    
    #### Funções 
    
-   1. [Função dentro de variavel](#funcao-dentro-de-variavel)
-   2. [Arrow function](#arrow-function)
-   3. [Function Factory](#function-factory)
+   1. [Função dentro de variavel.](#funcao-dentro-de-variavel)
+   2. [Arrow function.](#arrow-function)
+   3. [Function Factory.](#function-factory)
+   4. [Definindo que o escopo da função é um objeto.](#definindo-que-o-escopo-da-funcao-e-um-objeto)
+   5. [Passando função por parametro.](#passando-funcao-por-parametro)
+   6. [for in arguments.](#for-in-arguments)
+   7. [Utilizando bind para definir o escopo de uma função.](#utilizando-bind-para-definir-o-escopo-de-uma-funcao)
+   8. [Entendendo o this.](#entendendo-o-this)
+   9. [Criando uma Class](#criando-uma-class)
+   10. [Utilizando Apply e Call para definir o escopo de uma função](#utilizando-apply-e-call-para-definir-o-escopo-de-uma-funcao)
+   
+
    
    #### Objeto
    
@@ -38,9 +50,19 @@
    2. [Criando função dentro de objeto](#criando-funcao-dentro-de-objeto)
    3. [Criando objeto de função](#criando-objeto-de-funcao)
    4. [Utilizando destructuring com objeto](#utilizando-destructuring-com-objeto)
-   
+   5. [New object](#new-object)
+   6. [Criando um objeto por meio de uma função factory](#criando-um-objeto-por-meio-de-uma-funcao-factory)
+   7. [Object freeze](#object-freeze)
+   8. [Getters e Setters](#getters-setters)
+   9. [Object keys, values e entries](#object-keys-values-entries)
+   10. [Object prototype](#object-prototype)
+
+
    
    ### Css
+  
+   #### Conceitos
+   
    1. [Anatomia Css.](#anatomia-css)
    2. [Estilos Css Interno, Externo e Inline.](#estilos-css)
    3. [Integrando Css em página HTML.](#integracao-css)
@@ -50,12 +72,25 @@
    7. [Box Model.](#box-model)
    8. [Margin Collapsing](#margin-collapsing)
    
+   #### Flex Box
+
+   1. [Introdução Flex Box](#introducao-flex-box)
+   2. [Flex-Grow](#flex-grow)
+   3. [Flex-Shrink](#flex-shirink)
+   4. [Flex-Basis](#flex-basis)
+   5. [Flex](#flex)
+   6. [Flex-direction](#flex-direction)
+   7. [Flex-order](#flex-order)
+   8. [Justify-Content](#justify-content)
+   9. [Align-Items](#align-items)
+   10. [Align-Self](#align-self)
+
    
    ### JavaScript
    
    #### Estrutura de controle
 
-   <a name="for-in">1. For-in</a>
+   #### <a name="for-in">1. For-in</a>
    
    ```
    var person = {fname:"John", lname:"Doe", age:25};
@@ -72,7 +107,7 @@
 
    ```
    
-   <a name="for-of">2. For-of</a>
+   #### <a name="for-of">2. For-of</a>
       
    ```
    
@@ -88,7 +123,7 @@
    
    ```
    
-   <a name="for">3. For</a>
+   #### <a name="for">3. For</a>
       
    ```
    
@@ -104,13 +139,7 @@
    
    ```
    
-   <a name="while">4. While</a>
-      
-   ```
-   
-   ```
-   
-   <a name="do-while">5. Do-While</a>
+   #### <a name="while">4. While</a>
       
    ```
    var text = "";
@@ -127,7 +156,27 @@
    
    ```
    
-   <a name="if-else">6. If else</a>
+   #### <a name="do-while">5. Do-While</a>
+      
+   ```
+   
+      var text = "";
+
+      var i = 0;
+      
+      do {
+      
+         text += "The number is " + i;
+      
+         i++;
+      
+      }
+      
+      while (i < 5);
+   
+   ```
+   
+   #### <a name="if-else">6. If else</a>
       
    ```
    
@@ -141,7 +190,7 @@
    
    ```
    
-   <a name="switch-case">7. Switch case</a>
+   #### <a name="switch-case">7. Switch case</a>
       
    ```
    
@@ -174,7 +223,21 @@
        text = "I have never heard of that fruit...";
    }
    
-   ```   
+   ```
+   
+   #### <a name="foreach">8. ForEach </a>
+   
+   ```
+   
+   const array = [1 ,2 ,3 ,4 ,5]
+   
+   array.forEach((valor, chave, array) => {
+   
+   console.log(`[ ${chave} ] ` => ${valor})
+   
+   })
+
+   ```
    
    #### Array
    
@@ -235,9 +298,6 @@
    
    ```
    
-   
-   
-   
    #### Funções
    
    #### <a name="funcao-dentro-de-variavel">1. Função dentro de variável</a>
@@ -272,39 +332,221 @@
    }
    
    ```
-   
-   #### Objeto
-   
-   #### <a name="criando-objeto-de-forma-literal">1. Criando objeto de forma literal.</a>
-   
-   ``` 
-      const obj = {}
-      
-      obj.nome = 'Carlos';
-      
-      obj.['sobrenome'] = 'Henrique';
-      
-   ```
-   
-   #### <a name="criando-funcao-dentro-de-objeto">2. Criando função dentro de um objeto. </a>
+   #### <a name="definindo-que-o-escopo-da-funcao-e-um-objeto">4. Definindo um objeto como escopo da função</a>
    
    ```
-      const obj = {
+   function mostrar() {
+   
+      return console.log(`Ola meu nome é ${nome}`)
+   
+   }
+   
+   const objeto = {
+   
+      nome: 'Carlos Henrique'
+   
+   }
+   
+   objeto.mostrar();
+   
+   ```
+   #### <a name="passando-funcao-por-parametro">5. Passando uma função como parâmetro.</a>
+   
+   ```
+   function imprimir(mensagem) {
+   
+      mensagem();
+   
+   }
+   
+   imprimir( () => { console.log('chamando function mensagem'); })
+   
+   ```
+   
+   #### <a name="for-in-arguments">6. For-in arguments </a>
+   
+   ```
+   function soma() {
+   
+   let soma = 0
+   
+   for (i in arguments){
+   
+      soma += arguments[i]
+   
+   }
       
-         mostrar: function() {
+   return soma
+   
+   }
+   
+   ```
+   
+   #### <a name="utilizando-bind-para-definir-o-escopo-de-uma-funcao">7. Utilizando bind para definir o escopo de uma função. </a>
+   
+   ```
+      cosnt objeto = {
 
-            console.log('Ola mundo');
+         nome: 'Carlos',
+
+         mostrarNome() {
+
+            console.log(this.nome)
 
          }
       
       }
       
-   ```
-
-   #### <a name="#criando-objeto-de-funcao">3. Criando objeto de uma função</a>
+      const falar = objeto.mostrarNome.bind(objeto)
+      
+      falar()
    
    ```
-   function mostrar() {
+   
+   #### Exemplo 2 
+   
+   ```
+   function idade() {
+
+      this.idade = 0
+
+      setInterval(function () {
+
+         this.idade++
+
+         console.log(this.idade)
+
+      }.bind(this), 1000)
+      
+   }
+   
+   idade()
+   
+   ```
+   
+   #### <a name="entendendo-o-this">8. Entendendo o this</a>
+   
+   ```
+   
+   console.log(this === global) // false
+   
+   console.log(this === module) // false
+
+   console.log(this === module.exports) //true
+   
+   console.log(this === exports) //true
+
+   function Thislog() {
+
+       console.log(this === module.exports) // false
+       
+       console.log(this === global) // true
+       
+       console.log(this === exports) // false
+
+   }
+
+   Thislog()
+   
+   ```
+   
+   #### <a name="criando-uma-class">9. Criando uma class</a>
+   
+   ```
+   class Pessoa {
+   
+      constructor(nome) {
+      
+         this.nome = 'Carlos'
+         
+      }
+      
+      mostrarNome() {
+      
+         console.log(`Meu nome é ${this.nome}`)
+      
+      }
+   
+   }
+   
+   const objeto = new Pessoa('Carlos')
+   
+   objeto.mostrarNome();
+   
+   ```
+   
+   #### <a name="utilizando-apply-e-call-para-definir-o-escopo-de-uma-funcao">10. Utilizando Apply e Call </a>
+   
+   ```
+
+   function valor(imposto = 0, moeda = 'R$') {
+
+      return `${moeda} ${this.preco  * (1 - this.desc) * (1 + imposto)}`
+
+   }
+
+   const obj4 = {
+      preco: 5000,
+      moeda: '$',
+      desc: 0.15,
+      imposto: 0.15,
+      valor
+   }
+
+   //Sem utilizar Call ou Apply
+
+   console.log(obj4.valor(0.20, '$')) // $ 5100
+
+   //Não é recomendado, utilizar a variavel global.
+   
+   global.preco = 5000
+
+   global.desc = 0.15
+
+   console.log(valor(0.20, '$')) // $ 5100
+
+   //utilizando Call ou Apply
+
+   console.log(valor.apply(obj4 , [0.20 , '$'])) // $ 5100
+
+   console.log(valor.call(obj4 , 0.20 , '$')) // $ 5100
+   
+   ```
+   
+   
+   
+   
+   #### Objeto
+   
+   
+   #### <a name="criando-objeto-de-forma-literal">1. Criando objeto de forma literal.</a>
+   
+```
+const obj = {}
+
+obj.nome = 'Carlos';
+
+obj.['sobrenome'] = 'Henrique';     
+```
+   
+   #### <a name="criando-funcao-dentro-de-objeto">2. Criando função dentro de um objeto. </a>
+   
+```
+const obj = {
+
+   mostrar: function() {
+
+      console.log('Ola mundo');
+
+   }
+
+}
+```
+
+   #### <a name="criando-objeto-apartir-de-uma-funcao-construtora">3. Criando um objeto apartir de uma função construtora</a>
+
+```
+function mostrar() {
        
        this.nome = 'Carlos'
        
@@ -319,12 +561,11 @@
     const objeto = new mostrar()
     
     objeto.funcao()
-    
-   ```
+```
    
-   <a name="utilizando-destructuring-com-objeto">4. Utilizando operador destructuring com objeto </a>
+   #### <a name="utilizando-destructuring-com-objeto">4. Utilizando operador destructuring com objeto </a>
    
-   ```
+```
    const objeto = {
       nome: "Carlos",
       sobrenome: "Henrique"
@@ -333,9 +574,161 @@
    const {nome: n, sobrenome: s} = objeto
    
    console.log(n + " " + s)
+```
+
+   #### <a name="new-object">5. New object</a>
+
+```
+const objeto = new Object({
+
+   nome: 'Carlos Henrique',
+
+   mostrarNome() {
+
+      console.log(this.nome)
+
+   }
+
+})
+```
+
+   #### <a name="criando-um-objeto-por-meio-de-uma-funcao-factory">6. Criando um objeto por meio de uma função factory.</a>
+
+```
+const objeto = Object.create({}, {
+
+   nome: {value: 'Carlos', enumerable: true, writable: true},
+
+   mostrarNome: {
+
+           value: function () {
+           
+               return console.log(this.nome)
+           
+          }
+       
+       }
+
+})
+```
+
+   #### <a name="object-freeze">7. Object freeze</a>
+
+```
+const objeto = {
    
-   ```
- 
+   nome: 'Carlos'
+
+}
+
+Object.freeze(objeto);  
+```
+
+   #### <a name="getters-setters">8. Getters e Setters</a>
+
+```
+const objeto = {
+   
+   _nome: '',
+
+   set Nome(nome){
+
+      this._nome = nome
+
+   },
+
+   get Nome(){
+
+      return this.nome
+
+   }
+   
+}
+
+objeto.nome = 'Carlos';
+
+console.log(objeto.nome);
+```
+
+   ####  <a name="object-keys-values-entries">9. Object keys, values e entries</a>
+
+```
+const Pessoa = {
+    nome: 'Carlos',
+    
+    peso: '72kg',
+    
+    idade: '19',
+    
+    endereco: 'Rua sete casa 279',
+    
+    mostrar() {
+    
+        console.log(`Meu nome  é ${this.nome}
+    
+    }
+
+}
+
+// --> Object.entries
+
+console.log(Object.keys(Pessoa))
+
+// [ 'nome', 'peso', 'idade', 'endereco', 'mostrar' ]
+
+// --> Object.values
+
+console.log(Object.values(Pessoas))
+
+// [ 'Carlos', '72kg', '19', 'Rua sete casa 279', [Function: mostrar] ]
+
+// --> Object.entries(Pessoas)
+
+Object.entries(Pessoa).forEach(a => {
+  
+    console.log(a)
+    
+    // console.log(a[0])
+    
+    // console.log(a[1])
+
+})
+
+//[ 'nome', 'Carlos' ]
+//[ 'peso', '72kg' ]
+//[ 'idade', '19' ]
+//[ 'endereco', 'Rua sete casa 279' ]
+//[ 'mostrar', [Function: mostrar] ]
+```
+
+   #### <a name="object-prototype">10. Object prototype</a>
+
+```
+const pai = {
+
+   sobrenome: 'Carvalho',
+
+}
+
+const filho = {
+   __proto__: pai,
+   
+   nome: 'Carlos Henrique',
+   
+   idade: 19,
+   
+   status() {
+   
+      return `Meu nome é ${this.nome} ${this.sobrenome} eu tenho ${this.idade} anos`
+      
+   }
+}
+
+console.log(filho.status())
+
+// Meu nome é Carlos Henrique Carvalho eu tenho 19 anos
+
+``` 
    
    
    ### CSS
@@ -472,15 +865,16 @@
    
    No CSS você herda as regras de um elemento pai.
    
-       /* 
-       * Todo o conteúdo textual do documento
-       * terá 16px de tamanho, pois herdam do
-       * `body`.
-       */
-
-       body {
-         font-size: 16px;
-       }
+        
+    Todo o conteúdo textual do documento
+    terá 16px de tamanho, pois herdam do
+    `body`.
+       
+    ```
+     body {
+       font-size: 16px;
+     }
+    ```
    
    -  [Entendendo os valores ‘initial’ e ‘inherit’ do CSS](https://tableless.com.br/entendendo-os-valores-initial-e-inherit-do-css/)
    
@@ -523,8 +917,205 @@ As margens de irmãos adjacentes são colapsadas (execeto quando  o último irm�
    
    [Mais informações](https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Box_Model/margin_collapsing)
    
+
+  ### <a name="introducao-flex-box">1. Introdução Flex-Box</a>
+
+Para trabalhar com **Flex Box** é necessário criar primeiramente um container e aplicar :
+
+```
+    .flex-container {
+      display: flex;
+   }
+```
+  ### <a name="flex-grow">2. Flex-Grow </a>
+
+Da tamanho ao elemento preenchendo os espaços vazios.
+
+```
+.flex-container {
+  display: flex;
+  background-color: #f1f1f1;
+}
+
+.flex-container > div {
+  background-color: DodgerBlue;
+  color: white;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+<body> 
+
+<div class="flex-container">  
+   <div style="flex-grow: 1">1</div>  
+   <div style="flex-grow: 1">2</div>  
+   <div style="flex-grow: 8">3</div>  
+</div>
+
+</body>
+```
+![image](https://user-images.githubusercontent.com/57951744/71489618-2e99cb80-2805-11ea-8a76-e4f73a6e74b2.png)
+
+  ### <a name="flex-shirink">3. Flex-Shirink </a>
+
+A propriedade `flex-grow` é geralmente usada em conjunto com flex-shrink e `flex-basis`, tendo como propriedade de declaração única `flex`
+
+A propriedade `flex-shrink` especifica o _fator de encolhimento_ de um flex item.
+
+![duNzzISFc-oJJ4pFXr9OvCNwF46JawATpzrx](https://user-images.githubusercontent.com/57951744/71489811-4b82ce80-2806-11ea-8803-a3c46c723f0a.gif)
+
+![RITwrqDlcobhm-nFslcJ4ItB3yXdJbXNcAjy](https://user-images.githubusercontent.com/57951744/71490107-e039fc00-2807-11ea-8cb5-6103c2c88fad.gif)
+
+
+  ### <a name="flex-basis">4. Flex-Basis </a>
+
+O `flex-basis` é uma propriedade que utilizamos quando há a possibilidade de usar o `flex-grow` para "esticarmos" o elemento. Ele servirá, como o próprio nome diz, como uma base para eles. Se não alterar o valor padrão do `flex-basis` (`auto`), o valor usado como base será a largura e altura do próprio elemento. Caso passemos `0`, ele terá uma base em branco, então não aparecerá nada. Aí, se passarmos um `flex-grow`, ele "esticará" o elemento.
+
+![basic](https://user-images.githubusercontent.com/57951744/71490246-a4536680-2808-11ea-9a44-ac4840f7e1df.gif)
+
+
+  ### <a name="flex">5. Flex </a>
+
+Flex é uma abreviação de crescimento, encolhimento e base - todos juntos.
+
+O padrão é 0 (grow) 1 (shurink) e automático (basis).
+
+
+![05-bXAiCAQUBtI9Ve-RIWGfqiEMtmRGWIxwM](https://user-images.githubusercontent.com/57951744/71490201-6d7d5080-2808-11ea-883c-6485e8b751e1.gif)
+
+  ### <a name="flex-direction">6. Flex-Direction </a>
+A propriedade [CSS] **`flex-direction`** define como os itens flexíveis são colocados no contêiner flexível, definindo o eixo principal e a direção (normal ou invertido).
+
+```
+div {
+   flex-direction: row;
+   flex-direction: row-reverse;
+   flex-direction: column;
+   flex-direction: column-reverse;
+}
+```
+ <p align="center"><img src="https://user-images.githubusercontent.com/57951744/71493545-5184a980-281e-11ea-9f11-4e8f17efbfba.png"/><img src="https://user-images.githubusercontent.com/57951744/71493689-85140380-281f-11ea-854f-42e4fe9b2474.png"></p>
+
+  ### <a name="flex-order">7. Flex-Order </a>
+```
+.box {
+  display: flex;
+  flex-direction: row;
+}
+
+.box :nth-child(1) { order: 2; }
+.box :nth-child(2) { order: 3; }
+.box :nth-child(3) { order: 1; }
+.box :nth-child(4) { order: 3; }
+.box :nth-child(5) { order: 1; }
+```
+```
+<div class="box">
+    <div><a href="#">1</a></div>
+    <div><a href="#">2</a></div>
+    <div><a href="#">3</a></div>
+    <div><a href="#">4</a></div>
+    <div><a href="#">5</a></div>
+</div>
+```
+
+![image](https://user-images.githubusercontent.com/57951744/71493769-1e431a00-2820-11ea-86ef-7b66597ae33d.png)
+
+
+  ### <a name="justify-content">8. Justify-Content </a>
+
+Alinha os elementos no eixo principal.
+
+```
+div {
+   justify-content: center;     
+   justify-content: start;      
+   justify-content: end;        
+   justify-content: flex-start; 
+   justify-content: flex-end;   
+   justify-content: left;       
+   justify-content: right;  
+}
+```
+```
+div {
+   justify-content: space-between;
+   justify-content: space-around;
+   justify-content: space-evenly;
+   justify-content: stretch;
+}
+```
+  ### <a name="align-items">9. Align-Items </a>
+
+Alinha os elementos no eixo secundário.
+
+```
+justify-items: auto;
+justify-items: normal;
+justify-items: stretch;
+```
+```
+justify-items: center;     
+justify-items: start;      
+justify-items: end;        
+justify-items: flex-start; 
+justify-items: flex-end;   
+justify-items: self-start;
+justify-items: self-end;
+justify-items: left;       
+justify-items: right;      
+```
+```
+justify-items: baseline;
+justify-items: first baseline;
+justify-items: last baseline;
+```
+```
+justify-items: safe center;
+justify-items: unsafe center;
+```
+```
+justify-items: legacy right;
+justify-items: legacy left;
+justify-items: legacy center;
+```
+```
+justify-items: inherit;
+justify-items: initial;
+justify-items: unset;
+```
+
+
+
+  ### <a name="align-self">10. Align-Self </a>
+
+Alinha os elementos de manéira separada 
+
+
+```
+text-align: left;
+text-align: right;
+text-align: center;
+text-align: justify;
+text-align: justify-all;
+text-align: start;
+text-align: end;
+text-align: match-parent;
+```
+```
+text-align: -moz-center;
+text-align: -webkit-center;
+```
+```
+text-align: inherit;
+text-align: initial;
+text-align: unset;
+```
    
-   Carlos está digitando...
+  > Carlos está digitando...
       
    ### Autor
 
